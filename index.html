@@ -1,12 +1,250 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Oriental Medicine</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>现代东方医学（MOM） · Modern Oriental Medicine</title>
+  <meta name="description" content="MOM 为一套以东方哲学的方法论为底层、以“模型（Model）”为基本单元的独立医学体系。MOM is an independent medical system grounded in Eastern-philosophy methodology, using 'models' as the basic unit." />
+  <style>
+    :root{
+      --w:1100px; --bg:#f7f7f7; --card:#fff; --ink:#111; --muted:#666; --line:#eaeaea; --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.8;color:var(--ink);background:var(--bg)}
+    a{color:var(--ink);text-decoration:none}
+    .container{max-width:var(--w);margin:0 auto;padding:0 16px}
+
+    /* 顶栏 */
+    header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+    .nav{height:64px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .brand img{height:28px;width:auto}
+    .menu{display:flex;align-items:center;gap:18px}
+    .lang-switch{border:1px solid var(--line);border-radius:9px;padding:6px 10px;background:#fff;cursor:pointer}
+    @media (max-width:640px){.menu{gap:12px}}
+
+    /* 首屏横幅 */
+    .hero{margin:18px auto;border-radius:var(--radius);overflow:hidden;background:#ddd}
+    .hero-wrap{position:relative}
+    .hero img{width:100%;height:auto;display:block}
+    .hero-title{
+      position:absolute;left:20px;bottom:20px;background:rgba(255,255,255,.9);
+      padding:12px 14px;border-radius:12px;font-weight:800;font-size:26px
+    }
+
+    /* 卡片与网格 */
+    section{margin:22px 0}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+    h1{font-size:28px;margin:8px 0}
+    h2{font-size:22px;margin:6px 0 12px}
+    h3{font-size:18px;margin:4px 0 6px}
+    p.lead{color:var(--muted);margin-top:6px}
+    .sep{border:none;border-top:1px solid var(--line);margin:20px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+
+    /* 文章列表 */
+    .post{display:flex;flex-direction:column;gap:10px}
+    .thumb{border-radius:10px;overflow:hidden;background:#eee;aspect-ratio:16/9}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .meta{color:var(--muted);font-size:13px}
+    .btn{display:inline-block;border:1px solid #222;border-radius:10px;padding:10px 14px;font-weight:600}
+
+    /* 多语言可见性 */
+    .lang-zh{display:block}
+    .lang-en{display:none}
+    .lang-en .hero-title{font-size:24px}
+    .current-zh .lang-zh{display:block}
+    .current-zh .lang-en{display:none}
+    .current-en .lang-zh{display:none}
+    .current-en .lang-en{display:block}
+
+    /* 页脚 */
+    footer{border-top:1px solid var(--line);background:#fff;margin-top:28px}
+    footer .container{padding:20px 16px;color:#444}
+  </style>
+</head>
+<body class="current-zh"><!-- 默认中文，可点右上角切 EN -->
+
+  <!-- 顶部导航 -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <!-- TODO: 替换 /logo.png 为你的 LOGO 路径（根目录或 public/） -->
+        <img src="/logo.png" alt="MOM logo" onerror="this.style.display='none'">
+        <span>Modern Oriental Medicine</span>
+      </div>
+      <nav class="menu">
+        <a href="#about">宗旨</a>
+        <a href="#framework">框架结构</a>
+        <a href="/publish.html">公开发表</a>
+        <a href="#founder">创始人</a>
+        <a href="#contact">联系</a>
+        <button class="lang-switch" id="langBtn" aria-label="Switch language">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 首屏横幅 -->
+  <div class="container hero">
+    <div class="hero-wrap lang-zh">
+      <!-- TODO: 替换 /hero.jpg 为你的横幅图 -->
+      <img src="/hero.jpg" alt="现代东方医学 横幅" onerror="this.style.display='none'">
+      <div class="hero-title">现代东方医学</div>
+    </div>
+    <div class="hero-wrap lang-en">
+      <img src="/hero.jpg" alt="Modern Oriental Medicine banner" onerror="this.style.display='none'">
+      <div class="hero-title">Modern Oriental Medicine</div>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <hr class="sep" />
+
+    <!-- ① 什么是 MOM（严格使用你的核心定义） -->
+    <section id="about" class="card">
+      <div class="lang-zh">
+        <h2>什么是现代东方医学（MOM）</h2>
+        <p><strong>核心定义：</strong>MOM 为一套以东方哲学的方法论为底层、以“模型（Model）”为基本单元的独立医学体系。</p>
+        <!-- 可选：声明 PDF（留其一） -->
+        <!-- <p style="margin-top:8px"><a class="btn" href="/MOM-Founding-Statement.pdf" target="_blank">创始人声明（PDF）</a></p> -->
+      </div>
+      <div class="lang-en">
+        <h2>What is Modern Oriental Medicine (MOM)?</h2>
+        <p><strong>Core Definition:</strong> MOM is an independent medical system grounded in the methodology of Eastern philosophy, using “models” as its basic unit.</p>
+        <!-- <p style="margin-top:8px"><a class="btn" href="/MOM-Founding-Statement.pdf" target="_blank">Founding Statement (PDF)</a></p> -->
+      </div>
+    </section>
+
+    <!-- ② 框架结构（5 卡片） -->
+    <section id="framework" class="card">
+      <div class="lang-zh">
+        <h2>框架结构</h2>
+        <div class="grid">
+          <article class="card"><h3>学科定位与目标</h3><p>定位为独立学科；明确研究对象、目标与评价标准。</p></article>
+          <article class="card"><h3>方法论与规范</h3><p>假设—求证—复现；标准化与一致性；记录与审计要求。</p></article>
+          <article class="card"><h3>模型库（Model Registry）</h3><p>以模型为基本单元；命名、版本、最小模型集；新增/迭代/淘汰准则。</p></article>
+          <article class="card"><h3>证据与确权（Evidence & DOI）</h3><p>材料公开路径；DOI/时间戳；复核与更正版流程。</p></article>
+          <article class="card"><h3>应用与边界</h3><p>诊断/输出表达格式；与现代医学协作边界与安全原则。</p></article>
+        </div>
+      </div>
+      <div class="lang-en">
+        <h2>Framework</h2>
+        <div class="grid">
+          <article class="card"><h3>Discipline & Goals</h3><p>Positioned as an independent discipline; defines objects, goals and evaluation criteria.</p></article>
+          <article class="card"><h3>Methodology & Standards</h3><p>Hypothesis → verification → reproducibility; standardization and consistency; recording and audit.</p></article>
+          <article class="card"><h3>Model Registry</h3><p>Model as the basic unit; naming, versioning, minimal model set; rules for adding, iterating, retiring.</p></article>
+          <article class="card"><h3>Evidence & DOI</h3><p>Open materials workflow; DOI/timestamp; re-review and revision process.</p></article>
+          <article class="card"><h3>Applications & Scope</h3><p>Format of diagnostic/output expressions; collaboration boundary and safety with modern medicine.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ 文章（可以链接知乎或站内子页面） -->
+    <section id="posts">
+      <div class="lang-zh"><h2>最新文章</h2></div>
+      <div class="lang-en"><h2>Latest Articles</h2></div>
+
+      <div class="grid">
+        <!-- 示例：外链到知乎 -->
+        <article class="card post">
+          <a class="thumb" href="https://zhuanlan.zhihu.com/" target="_blank" rel="noopener">
+            <img src="/covers/sample1.jpg" alt="文章封面" onerror="this.style.display='none'">
+          </a>
+          <div class="lang-zh">
+            <a href="https://zhuanlan.zhihu.com/" target="_blank" rel="noopener"><strong>示例：MOM 简介与阅读指引</strong></a>
+            <div class="meta">2025-09-01 · 平台：知乎</div>
+            <p class="lead">（占位摘要）可直接跳转到知乎文章。</p>
+          </div>
+          <div class="lang-en">
+            <a href="https://zhuanlan.zhihu.com/" target="_blank" rel="noopener"><strong>Sample: MOM Overview & Reading Guide</strong></a>
+            <div class="meta">2025-09-01 · Platform: Zhihu</div>
+            <p class="lead">(Placeholder) Links to your external article.</p>
+          </div>
+        </article>
+
+        <!-- 示例：站内子页面 /posts/first.html（后面再做） -->
+        <article class="card post">
+          <a class="thumb" href="posts/first.html">
+            <img src="/covers/sample2.jpg" alt="文章封面" onerror="this.style.display='none'">
+          </a>
+          <div class="lang-zh">
+            <a href="posts/first.html"><strong>示例：站内文章模板</strong></a>
+            <div class="meta">2025-09-02 · 平台：本站</div>
+            <p class="lead">（占位摘要）若文章放本站，链接到 /posts/xxx.html。</p>
+          </div>
+          <div class="lang-en">
+            <a href="posts/first.html"><strong>Sample: On-site Article Template</strong></a>
+            <div class="meta">2025-09-02 · Platform: Site</div>
+            <p class="lead">(Placeholder) Link to /posts/xxx.html for on-site posts.</p>
+          </div>
+        </article>
+
+        <!-- 更多文章占位 -->
+        <article class="card post">
+          <a class="thumb" href="#" onclick="return false;">
+            <img src="/covers/sample3.jpg" alt="封面占位" onerror="this.style.display='none'">
+          </a>
+          <div class="lang-zh">
+            <strong>更多文章即将发布</strong>
+            <div class="meta">持续更新</div>
+            <p class="lead">复制整块 <code>&lt;article&gt;</code> 即可新增一条文章。</p>
+          </div>
+          <div class="lang-en">
+            <strong>More posts coming soon</strong>
+            <div class="meta">Updated continuously</div>
+            <p class="lead">Duplicate this <code>&lt;article&gt;</code> block to add a new item.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ④ 创始人与联系（占位可改） -->
+    <section id="founder" class="card">
+      <div class="lang-zh">
+        <h2>创始人</h2>
+        <p class="lead">（占位）这里放 2–3 句简介，后续你确认后再替换。</p>
+      </div>
+      <div class="lang-en">
+        <h2>Founder</h2>
+        <p class="lead">(Placeholder) 2–3 sentence bio; replace after you confirm.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <div class="lang-zh">
+        <h2>联系合作</h2>
+        <p>邮箱：<a href="mailto:contact@example.org">contact@example.org</a></p>
+        <p class="lead">（可添加微信 / 表单链接）</p>
+      </div>
+      <div class="lang-en">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:contact@example.org">contact@example.org</a></p>
+        <p class="lead">(You may add WeChat / form links.)</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © Modern Oriental Medicine (MOM)
+    </div>
+  </footer>
+
+  <!-- 语言切换（中文 / English） -->
+  <script>
+    const btn = document.getElementById('langBtn');
+    const body = document.body;
+    btn.addEventListener('click', () => {
+      const isZH = body.classList.contains('current-zh');
+      body.classList.toggle('current-zh', !isZH);
+      body.classList.toggle('current-en',  isZH);
+      btn.textContent = isZH ? '中文' : 'EN';
+      btn.setAttribute('aria-label', isZH ? '切换为中文' : 'Switch to English');
+    });
+  </script>
+</body>
 </html>
