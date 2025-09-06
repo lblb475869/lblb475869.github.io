@@ -4,18 +4,11 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/', // keep '/' since you are using a custom domain
+  base: '/', // custom domain
   build: {
-    outDir: 'dist', // build output directory
-    sourcemap: true // optional: generate source maps for debugging
+    outDir: 'dist',
+    sourcemap: true
   },
-  server: {
-    port: 3000,
-    open: true
-  },
-  resolve: {
-    alias: {
-      '@': '/src'
-    }
-  }
+  server: { port: 3000, open: true },
+  resolve: { alias: { '@': '/src' } }
 })
