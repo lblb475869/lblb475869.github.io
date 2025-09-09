@@ -1,44 +1,42 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>MOM | 现代东方医学 · Modern Oriental Medicine</title>
-  <meta name="description" content="现代东方医学（MOM）：以可验证的模型为基本单元，构建独立学科——逻辑化、科学化、标准化。">
+  <meta name="description" content="MOM（现代东方医学）：以东方方法论为底层、以“模型”为基本单元，结合现代科学语言重构的独立医学体系。">
   <style>
-    :root{
-      --fg:#111; --muted:#555; --bg:#fff; --link:#0a58ca; --max:860px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0; font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif; color:var(--fg); background:var(--bg);}
-    a{color:var(--link); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 16px}
-    header{border-bottom:1px solid #eee; background:#fff; position:sticky; top:0; z-index:10}
-    .topbar{display:flex; align-items:center; justify-content:space-between; height:56px}
-    .logo{font-weight:700; letter-spacing:.5px}
-    .logo small{color:var(--muted); font-weight:500}
-    nav ul{display:flex; gap:18px; list-style:none; padding:0; margin:0}
-    nav a{color:var(--fg)}
-    main{padding:28px 0 72px}
-    h1{font-size:28px; line-height:1.35; margin:18px 0 8px}
-    .subtitle{color:var(--muted); margin:0 0 24px}
-    section{margin:28px 0}
-    .prose p{margin:14px 0}
-    .prose ul{margin:10px 0 10px 1.2em}
-    .prose li{margin:6px 0}
-    .muted{color:var(--muted)}
-    footer{border-top:1px solid #eee; padding:24px 0; color:var(--muted); font-size:14px}
-    /* 纯文字风格的小标题 */
-    .section-title{font-size:20px; font-weight:700; margin:28px 0 12px}
-    .list-plain{list-style:disc; margin-left:1.2em}
+    :root{ --fg:#111; --muted:#555; --bg:#fff; --link:#0a58ca; --max:900px; }
+    *{ box-sizing:border-box; }
+    body{ margin:0; color:var(--fg); background:var(--bg);
+      font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:0 16px; }
+    header{ position:sticky; top:0; z-index:10; background:#fff; border-bottom:1px solid #eee; }
+    .topbar{ display:flex; align-items:center; justify-content:space-between; height:56px; }
+    .logo{ font-weight:700; letter-spacing:.4px; }
+    .logo small{ color:var(--muted); font-weight:500; margin-left:6px; }
+    nav ul{ display:flex; gap:18px; list-style:none; padding:0; margin:0; }
+    nav a{ color:var(--fg); }
+    main{ padding:28px 0 72px; }
+    h1{ font-size:28px; line-height:1.35; margin:18px 0 8px; }
+    h2{ font-size:20px; margin:28px 0 12px; }
+    .subtitle{ color:var(--muted); margin:0 0 18px; }
+    section{ margin:28px 0; }
+    .prose p{ margin:12px 0; }
+    .prose ul{ margin:10px 0 10px 1.2em; }
+    .prose li{ margin:6px 0; }
+    .muted{ color:var(--muted); }
+    footer{ border-top:1px solid #eee; padding:24px 0; color:var(--muted); font-size:14px; }
+    .divider{ border-top:1px solid #eee; margin:24px 0; }
   </style>
 </head>
 <body>
+  <!-- 顶部：Logo + 导航 -->
   <header>
     <div class="wrap topbar">
       <div class="logo">MOM <small>Modern Oriental Medicine</small></div>
-      <!-- 纯文字导航（锚点可先占位，子页面将来替换为外链） -->
       <nav aria-label="主导航">
         <ul>
           <li><a href="#purpose">宗旨</a></li>
@@ -55,50 +53,92 @@
     <!-- 大标题（中英文） -->
     <section id="hero">
       <h1>现代东方医学 · Modern Oriental Medicine (MOM)</h1>
-      <p class="subtitle">逻辑化 · 科学化 · 标准化</p>
+      <p class="subtitle">Modern Oriental Medicine (MOM)</p>
     </section>
 
-    <!-- 直接进入：什么是 MOM（长文，去 AI 化版） -->
-    <section id="about" class="prose">
-      <h2 class="section-title">什么是现代东方医学（MOM）</h2>
-      <p>医学，本质上是一门探索人体健康与疾病规律的学科。它既要回答“为什么会失衡”，也要提供能被检验的方法，让人重新获得并维持健康。看似简单，但现实却往往复杂。我们常常发现自己被困在两个极端：一端把问题拆得很细，某个分子或细胞解释得明明白白，却难以说明整体怎样恢复秩序；另一端则拥有完整的整体观，但语言模糊，缺乏验证，往往说得热闹，却难以复现。</p>
-      <p>现代东方医学（Modern Oriental Medicine，MOM）的提出，正是为了走出这种困境。它既不是旧体系的补丁，也不是“传统加现代”的拼接，而是要从头搭建一块底盘。目标很清楚：让医学能够说得明白，能够验证，能够追溯，并且能随着证据的积累不断更新。</p>
-      <p>在 MOM 的设计里，最核心的概念是“模型”。模型不是抽象口号，而是一份实用的说明书：要看什么，怎么做，怎么算。只有当不同的人照着同一套流程去做，并得到相近的结果，这个模型才算成立。这样一来，医学讨论不再是“谁说得更有气势”，而是“哪个模型证据更硬”。</p>
-      <p>放在更广的背景里看，中医（中国）、韩医（韩国）、汉方医学（日本），以及阿育吠陀等传统体系，都强调整体和关系，也确实积累了丰富经验。但它们在标准化验证和多中心复现上都有共同的难题。而现代的还原论医学，虽然在局部上极其精细，却同样缺乏整体性的回答。MOM 不依附这些体系，而是用可验证的模型为基本单元，构建一门新的学科，把“整体视角”真正落实到可操作、可审计的层面。</p>
+    <!-- 一句话定义（中英文） -->
+    <section id="definition" class="prose">
+      <p><strong>中文：</strong>MOM（现代东方医学）是一门以东方方法论为底层、以“模型”为基本单元，结合现代科学语言重构的独立医学体系。</p>
+      <p><strong>English:</strong> Modern Oriental Medicine (MOM) is an independent medical discipline built on Oriental methodology, taking the “model” as its basic unit and reconstructed with modern scientific language.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 长文：什么是现代东方医学（MOM） —— 中文 -->
+    <section id="about-zh" class="prose">
+      <h2>什么是现代东方医学（MOM）</h2>
+      <p>医学可以说是一个探究人体健康和疾病规律的学科。它既需要探寻“为何失衡”，也要提供可以验证的方法来帮助人们恢复和保持健康。看似简单，实际上却常常很复杂。我们常常发现，自己要么是把问题细致地拆解到分子或细胞层面，清晰地解释一个问题，但难以说明整体如何恢复“平衡”；要么就是把问题描述得很完整整体，但是表达得太过模糊，缺乏验证依据，话虽多但难以进行复现。</p>
+      <p>现代东方医学之所以被提出，就是为了摆脱这种困境。它既不是单纯地修补老传统，也不是简单地将“传统加现代”粘合在一起，而是要从头建立一个完整的框架。目标很明确：医学应该能够清晰表达，能够进行验证，能够追溯原因，并且随着证据的累积不断进行更新改进。</p>
+      <p>在现代东方医学的设计里，最核心的概念是“模型”。模型不是空洞的概念，而是一份详细的说明：要观察什么，应采取什么行动，如何评估结果。只有当不同的人根据相同的流程进行工作，得出相似的结论时，这个模型才算成立。这样，医学讨论不再是“谁说得更有魄力”，而是“哪个依据更可靠”。</p>
+      <p>更广泛来看，中医（中国）、韩医（韩国）、汉方医学（日本），以及阿育吠陀等传统医学体系，确实积累了丰富的经验。但它们在标准化、重复实验等方面都面临共同的挑战。而现代还原论医学在个别细节上深入，但同样缺乏全面性的解释。现代东方医学不依赖这些体系，独立设计出了自己的方法，以可验证的模型作为基本单位，建立起一门新的学科，将“全局视角”真正实现到可操作和可审核的层面。</p>
       <p>为了保证稳固与透明，MOM 坚持三条硬规则：</p>
       <ul>
-        <li><strong>逻辑化</strong>：所有判断和干预都要有清晰的推理链，避免空泛术语；</li>
-        <li><strong>科学化</strong>：必须能验证、能复现、能迭代，外部复核是必须的，正负结果都要存证；</li>
-        <li><strong>标准化</strong>：观察—操作—判定三环节必须写清楚，记录和命名要统一，目标是尽量做到“十个人，结果一致”。</li>
+        <li><strong>逻辑化：</strong>所有的判断和干预都需要有清晰的推理链，避免空洞的术语；</li>
+        <li><strong>科学化：</strong>必须可以验证、重复和迭代，外部审核是必须的，正负结果都需要留存证据；</li>
+        <li><strong>标准化：</strong>观察—操作—判断三环节必须写明细节，记录和命名需要统一，目标是尽量做到“十个人结果一致”。</li>
       </ul>
-      <p>所有研究成果，不论正面还是负面，都要以时间戳和 DOI 的方式留痕；模型也不该被视为定论，而是像软件一样的版本，会随着证据一步步升级。</p>
-      <p>这里的“东方”，不是指地理，而是一种观察方式：强调整体、关系和秩序；“现代”也不是单纯的时间修饰，而是一种工作方式：讲验证、讲复现、讲迭代。两者结合，使 MOM 既能承接东方思想的深度，又能落实科学方法的严谨，让医学重新变得逻辑化、科学化、标准化。</p>
-      <p class="muted">MOM 的愿景并不张扬。它不是要找一套万能的答案，而是要建立一个可以不断更新的知识体系。一步步来，用最小可证的模型，把医学重新搭建成一门人人能学、人人能查、人人能复的学问。</p>
+      <p>所有研究成果，无论正面还是负面，都需要用时间戳和 DOI 的方式留下痕迹；模型也不应该视为定论，而应像软件一样有不同版本，随着证据一次次升级。</p>
+      <p>这里的“东方”，指的不是地理位置，而是一种观察世界的方式：强调整体、关系与秩序；“现代”也不仅仅是时间修饰，而是一种工作模式：重视验证、重现与迭代改进。两者相结合，使 MOM 既能借鉴东方思想的深邃见解，也能贯彻科学方法的严谨精神，让医学重新走向逻辑、科学与标准化的发展道路。</p>
+      <p>现代东方医学的愿景并不张扬，它不是想找到一套万能的通用答案，而是想构建一个可以不断更新完善的知识体系。一步一步来，采用最小可证实的模型，把医学重新搭建成每个人都能学习、查找与复现的学科。</p>
     </section>
 
-    <!-- 文章（纯文字列表，后续可替换为子页面或外链） -->
-    <section id="articles">
-      <h2 class="section-title">文章</h2>
-      <ul class="list-plain">
-        <li>（占位）模型写作范式：观察—操作—判定（OOO）</li>
-        <li>（占位）版本化与复核：让讨论回到证据对账</li>
-        <li>（占位）从整体到可验证：现代与“东方”的结合路径</li>
+    <!-- 长文：英文翻译 -->
+    <section id="about-en" class="prose">
+      <h2>What is Modern Oriental Medicine (MOM)</h2>
+      <p>Medicine can be described as a discipline that investigates the laws governing human health and disease. It must both ask why imbalance occurs and provide verifiable methods that help people restore and sustain health. This sounds simple, yet in practice it is often complex. We frequently find ourselves at two extremes: either we break problems down to the molecular or cellular level and explain one piece clearly but struggle to say how the whole regains “balance”; or we offer sweeping, holistic descriptions that are too vague, lacking standards of verification—plenty of words, little reproducibility.</p>
+      <p>Modern Oriental Medicine (MOM) was proposed to move beyond this impasse. It is neither a patch on old traditions nor a simple “tradition + modernity” splice; instead, it aims to build a complete framework from the ground up. The goal is clear: medicine should be expressed with clarity, verified in practice, traced in rationale, and continually updated as evidence accumulates.</p>
+      <p>In MOM, the central concept is the <em>model</em>. A model is not an empty label but a concrete specification: what to observe, what actions to take, and how to evaluate outcomes. Only when different people follow the same procedure and reach comparable conclusions can a model be considered established. In this way, debate in medicine shifts from “whose rhetoric is stronger” to “which evidence is more reliable.”</p>
+      <p>More broadly, traditional systems such as Traditional Chinese Medicine (China), Korean Medicine (Korea), Kampo (Japan), and Ayurveda have amassed substantial experience, yet they share common challenges in standardization and reproducibility. Meanwhile, modern reductionist medicine goes deep on particulars but often lacks a comprehensive account of the whole. MOM does not depend on these systems; it designs its own approach, using verifiable models as basic units to build a new discipline that makes a “global perspective” operational and auditable.</p>
+      <p>To ensure rigor and transparency, MOM adheres to three hard rules:</p>
+      <ul>
+        <li><strong>Logic:</strong> every judgment and intervention must have a clear chain of reasoning; avoid empty jargon.</li>
+        <li><strong>Science:</strong> methods must be verifiable, reproducible, and iterative; external review is required; both positive and negative results must be recorded.</li>
+        <li><strong>Standardization:</strong> the trio of observation–operation–evaluation must be specified in detail, with unified recording and naming, aiming as far as possible for “ten people, one result.”</li>
+      </ul>
+      <p>All research outputs, whether positive or negative, should be time-stamped and registered with DOIs; models should not be treated as final verdicts but versioned like software, upgraded as evidence accumulates.</p>
+      <p>“Oriental” here is not a geography but a way of seeing—emphasizing wholes, relations, and order; “modern” is not merely temporal but a working mode that values verification, replication, and iterative refinement. Combined, MOM draws on the depth of Oriental thought while implementing the rigor of scientific method, guiding medicine back onto a path of logic, science, and standardization.</p>
+      <p>MOM’s vision is unassuming: not to hunt for a universal panacea, but to build a knowledge system that can be continuously updated and refined. Step by step, with the smallest verifiable models, it seeks to rebuild medicine as a discipline that anyone can learn, inspect, and reproduce.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 文章 -->
+    <section id="articles" class="prose">
+      <h2>文章 Articles</h2>
+      <ul>
+        <li>（占位）模型写作范式：观察—操作—判断（OOO） / Model-writing Pattern: Observables–Operations–Outcomes</li>
+        <li>（占位）版本化与复核：让讨论回到证据对账 / Versioning & External Review: From Debate to Evidence</li>
+        <li>（占位）从整体到可验证：现代与“东方”的结合路径 / From Wholeness to Verification</li>
       </ul>
     </section>
+
+    <div class="divider"></div>
 
     <!-- 创始人 -->
-    <section id="founder">
-      <h2 class="section-title">创始人</h2>
-      <p>（占位）姓名 / 简介 / 研究方向 / ORCID（可选）</p>
+    <section id="founder" class="prose">
+      <h2>创始人 Founder</h2>
+      <p><strong>中文简介</strong></p>
+      <p><strong>李霖豪</strong><br/>
+      现代东方医学（Modern Oriental Medicine, MOM）创始人。长期致力于医学体系的重构与创新，提出炁–液功能模型、分形全息方法论、全息普适原理等原创理论，并在 Zenodo、Figshare 等国际学术平台确立原创权。</p>
+      <p>代表性著作包括：《双手脉诊》（线装书局，2023）、《唐本伤寒论解读》、《脉诊双法不修心》等；原创理论与方法涵盖炁–液功能模型、分形全息方法论、全息普适原理、泛全息身体映射模型等。其学术体系以语言逻辑、分形全息、系统映射为核心，探索医学的结构化表达与可验证路径，力图建立面向未来的东方医学新框架。</p>
+      <p>学术定位：医学创新研究者、跨学科方法论构建者。研究方向包括脉诊、针法、食疗、中西药结合、全息映射理论及跨学科方法等。</p>
+
+      <p><strong>English Bio</strong></p>
+      <p><strong>Li Linhao</strong><br/>
+      Founder of Modern Oriental Medicine (MOM). He has long been dedicated to reconstructing and innovating medical systems and has proposed original theories such as the Qi–Liquid Functional Model, Fractal Holographic Methodology, and Holographic Universal Principle. His works are registered on international academic platforms such as Zenodo and Figshare to establish originality.</p>
+      <p>Representative publications include <em>Dual-Hand Pulse Diagnosis</em> (Xianzhang Press, 2023), <em>Tang-Version Shanghan Lun Interpretation</em>, and <em>Pulse Diagnosis Double-Method Without Cultivating the Heart</em>. His academic framework emphasizes language logic, fractal holography, and systemic mapping, aiming to develop a structured and verifiable path for a future-oriented medical paradigm.</p>
+      <p>Academic focus: researcher in medical innovation and cross-disciplinary methodology. His research spans pulse diagnosis, needling methods, dietary therapy, integration of Chinese and Western medicine, holographic mapping theory, and interdisciplinary approaches.</p>
     </section>
 
-    <!-- 联系方式 -->
-    <section id="contact">
-      <h2 class="section-title">联系</h2>
-      <p>邮箱：<a href="mailto:contact@mom.org">contact@mom.org</a></p>
+    <div class="divider"></div>
+
+    <!-- 联系 -->
+    <section id="contact" class="prose">
+      <h2>联系 Contact</h2>
+      <p>邮箱 Email：<a href="mailto:linhaoli@proton.me">linhaoli@proton.me</a></p>
     </section>
 
-    <!-- 顶部导航锚点占位（后续做子页面可替换为外链） -->
+    <!-- 顶部导航锚点占位（子页后续替换） -->
     <div id="purpose" hidden></div>
     <div id="framework" hidden></div>
     <div id="publications" hidden></div>
